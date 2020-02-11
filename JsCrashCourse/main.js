@@ -50,10 +50,34 @@ function onSubmit(e) {
         setTimeout(() => message.remove(), 3000)
     } else {
         const li = document.createElement('li')
+        const btn = document.createElement('button')
+        btn.className = 'btn btn-default btn-sm float-right ml-5 remove'
+        const textNode = document.createTextNode('Remove')
+        btn.appendChild(textNode)
         li.appendChild(document.createTextNode(`${name.value} : ${email.value}`))
+        li.appendChild(btn)
         UserList.appendChild(li)
             // clear the field
         name.value = ''
         email.value = ''
     }
 }
+
+UserList.addEventListener('click', removeUser)
+
+function removeUser(e) {
+    // console.log('click')
+    if (e.target.classList.contains('remove')) {
+        // console.log('button clicked')
+        var user = e.target.parentElement
+            // console.log(user)
+        user.remove()
+    }
+}
+
+// var btns = document.getElementsByClassName('remove')
+// Array.from(btns).forEach(function(btn) {
+//     btn.addEventListener('click', function(e) {
+//         console.log('click')
+//     })
+// })

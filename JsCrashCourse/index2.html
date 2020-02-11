@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>JS For Beginners</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
 <body>
@@ -14,7 +15,7 @@
         <h1>JS For Beginners</h1>
     </header>
 
-    <section class="container">
+    <section id="container">
         <form id="my-form">
             <h1>Add User</h1>
             <div class="msg"></div>
@@ -26,10 +27,12 @@
                 <label for="email">Email:</label>
                 <input type="text" id="email">
             </div>
-            <input class="btn" type="submit" value="Submit">
+            <input class="butn" type="submit" value="Submit">
         </form>
 
-        <ul id="users"></ul>
+        <ul id="users">
+            <!-- <li>Items<button class="'btn btn-default btn-sm float-right ml-5 remove">Remove</button></li> -->
+        </ul>
 
         <!-- <ul class="items">
             <li class="item">Item 1</li>
