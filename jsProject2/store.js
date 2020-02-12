@@ -16,6 +16,16 @@ function ready() {
         var input = qtyInputs[i]
         input.addEventListener('change', QtyChange)
     }
+
+    const addCart = document.getElementsByClassName('shop-item-button')
+    for (var i = 0; i < addCart.length; i++) {
+        var cart_item = addCart[i]
+        cart_item.addEventListener('click', addToCart)
+    }
+}
+
+function addToCart() {
+    console.log('click')
 }
 
 
