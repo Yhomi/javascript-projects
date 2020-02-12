@@ -115,4 +115,5 @@ function PurchaseClick() {
     while (cart_items.hasChildNodes()) {
         cart_items.removeChild(cart_items.firstChild)
     }
+    updateTotal()
 }
