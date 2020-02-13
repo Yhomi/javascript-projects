@@ -92,12 +92,71 @@ const thirty = companies.filter(fil => (fil.end - fil.start >= 30))
 // console.log(comp_name)
 
 // get the squreroot of each ages and round to 2 dp
-const ageSqrt = ages.map(age => Math.round(Math.sqrt(age) * 100) / 100)
-console.log(ageSqrt)
-const ageMap = ages
-    .map(age => Math.round(Math.sqrt(age) * 100) / 100)
-    .map(age => age * 2)
-console.log(ageMap)
+// const ageSqrt = ages.map(age => Math.round(Math.sqrt(age) * 100) / 100)
+// console.log(ageSqrt)
+// const ageMap = ages
+//     .map(age => Math.round(Math.sqrt(age) * 100) / 100)
+//     .map(age => age * 2)
+// console.log(ageMap)
 
 //sort
-//reduce
+
+// sort companies according to their start year
+//ES5
+// const sortedCompanies = companies.sort(function(c1, c2) {
+//     if (c1.start > c2.start) {
+//         return 1
+//     } else {
+//         return -1
+//     }
+// })
+
+//ES6
+// const sortedCompanies = companies.sort((a, b) => (a.start > b.start ? 1 : -1))
+
+// console.log(sortedCompanies)
+
+// sort ages from lowest to highest
+const sortAge = ages.sort((a, b) => a - b)
+    //         // sort age in descending order
+    //     const sortAgeDesc = ages.sort((a, b) => b - a)
+    //     console.log(sortAge)
+    //     console.log(sortAgeDesc)
+
+
+// //reduce
+
+// // sum of all the ages
+
+// // let sum = 0;
+// // for (let i = 0; i < ages.length; i++) {
+// //     // sum = sum + ages[i]
+// //     sum += ages[i]
+// // }
+// // console.log(sum)
+
+// // using reduce
+// //ES5
+// // const ageSum = ages.reduce(function(total, age) {
+// //     return total + age
+// // }, 0)
+// // console.log(ageSum)
+
+// // ES6
+// const ageSum = ages.reduce((total, age) => total + age, 0)
+
+// console.log(ageSum)
+
+// // get total years of companies
+// const totalYears = companies.reduce((total, company) => total + (company.end - company.start), 0)
+// console.log(totalYears)
+
+// Combined Array Methods
+
+const combined = ages
+    .map(age => age * 2)
+    .filter(age => age >= 40)
+    .sort((a, b) => a - b)
+    .reduce((x, y) => x + y, 0)
+
+console.log(combined)
