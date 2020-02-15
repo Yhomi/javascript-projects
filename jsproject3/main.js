@@ -14,6 +14,8 @@ function getFactFetch() {
                 fact.style.display = 'block'
                 factText.innerText = data
             }
-
+        }).catch((err) => {
+            fact.style.display = 'block'
+            factText.innerText = err
         })
 }

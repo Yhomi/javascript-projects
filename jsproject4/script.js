@@ -15,6 +15,7 @@ function getNameFacts() {
                 factsBody.style.display = "block"
                 output.innerText = data
             }).catch((err) => {
+                factsBody.style.display = "block"
                 output.innerText = err
             })
     }
