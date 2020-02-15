@@ -5,12 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fetch API SandBox</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
 <body>
-    <button id="btn">Get Text</button>
+    <div class="container">
+        <h1 class="display-4 mb-4">Fetch API Sandbox</h1>
+        <div class="d-flex">
+            <button id="btn" class="btn btn-primary mr-4">Get Text</button>
+            <button id="btn1" class="btn btn-success mr-4">Get Users</button>
+            <button id="btn2" class="btn btn-warning">Get API DATA</button>
+        </div>
 
-    <div id="output"></div>
+        <hr>
+        <form id="addPost">
+            <div class="form-group">
+                <input type="text" id="title" placeholder="Title" class="form-control">
+            </div>
+            <div class="form-group">
+                <textarea id="body" placeholder="Body" class="form-control"></textarea>
+            </div>
+            <input type="submit" value="Submit" class="btn btn-secondary">
+        </form>
+        <hr>
+        <div id="output"></div>
+
+    </div>
 
     <script src="script.js"></script>
 </body>
