@@ -1,0 +1,64 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.image {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+.menu-icon {
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    z-index: 1;
+    left: 42px;
+    top: 24px;
+    cursor: pointer;
+}
+
+.menu {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    overflow: hidden;
+    background: rgba(0, 0, 0, .8);
+    transition: 2s ease-in-out;
+}
+
+.menu-content {
+    position: relative;
+    width: 100%;
+    top: 25%;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.menu-content a {
+    text-decoration: none;
+    padding: 16px;
+    display: block;
+    color: white;
+    font-size: 18px;
+    font-family: sans-serif;
+    transition: 4s ease-in-out;
+}
+
+.menu-content a:hover {
+    background-color: #1b988b;
+}
+
+.closebtn {
+    position: absolute;
+    top: 36px;
+    right: 48px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+}
