@@ -29,3 +29,22 @@ $(document).ready(() => {
       });
   }
 });
+
+function movieSelected(id) {
+  sessionStorage.setItem("movieId", id);
+  window.location = "movie.html";
+  return false;
+}
+
+function getMovie() {
+  let movieId = sessionStorage.getItem("movieId");
+  console.log(movieId);
+  axios
+    .get("http://www.omdbapi.com/?i=" + movieId + "&apikey=ad7d9e69")
+    .then(response => {
+      console.log(response);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+}
